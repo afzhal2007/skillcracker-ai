@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>SkillCracker AI | Self Introduction Round</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg" />
+
+  <link rel="stylesheet" href="../css/rounds.css" />
+</head>
+
+<body>
+  <div class="round-page">
+
+    <header class="round-topbar">
+      <a href="../dashboard.html" class="brand">
+        <div class="brand-icon">⚡</div>
+        <div>
+          <h2>SkillCracker <span>AI</span></h2>
+          <p>Voice Interview Mode</p>
+        </div>
+      </a>
+
+      <div class="round-status">
+        <span class="live-dot"></span>
+        <p>Round 01 / 05</p>
+      </div>
+    </header>
+
+    <main class="round-shell">
+
+      <section class="round-hero">
+        <span class="tag">SELF INTRODUCTION ROUND</span>
+        <h1>Introduce yourself with confidence</h1>
+        <p>
+          AI will ask self-introduction questions. Speak clearly in English.
+          Your confidence, clarity, grammar, and answer structure will be evaluated.
+        </p>
+      </section>
+
+      <section class="interview-layout">
+
+        <div class="interview-card">
+          <div class="ai-avatar">
+            <div class="avatar-circle">AI</div>
+            <div class="wave">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <div class="question-box">
+            <p class="question-label">AI Question</p>
+            <h2 id="questionText">Click Start Round to begin your interview.</h2>
+          </div>
+
+          <div class="timer-box">
+            <p>Auto mic starts in</p>
+            <h3 id="countdown">--</h3>
+          </div>
+
+          <div class="answer-box">
+            <p>Your Answer</p>
+            <textarea id="answerText" placeholder="Your spoken answer will appear here..." readonly></textarea>
+          </div>
+
+          <div class="controls">
+            <button class="primary-btn" id="startBtn">Start Round</button>
+            <button class="ghost-btn" id="retryBtn">Retry Question</button>
+            <button class="finish-btn" id="finishBtn">Finish Round</button>
+          </div>
+        </div>
+
+        <aside class="side-panel">
+          <div class="score-card">
+            <h3>Live Round Score</h3>
+            <div class="score-circle">
+              <span id="liveScore">0%</span>
+            </div>
+          </div>
+
+          <div class="tips-card">
+            <h3>Speaking Tips</h3>
+            <ul>
+              <li>Start with your name and course.</li>
+              <li>Speak slowly and clearly.</li>
+              <li>Mention skills, project, and goal.</li>
+              <li>Use simple English.</li>
+            </ul>
+          </div>
+        </aside>
+
+      </section>
+
+    </main>
+  </div>
+
+  <script src="../js/storage.js"></script>
+  <script type="module" src="../js/auth-check.js"></script>
+  <script>
+    window.roundConfig = {
+      roundKey: "round1",
+      nextPage: "resume-round.html",
+      title: "Self Introduction Round",
+      questions: [
+        "Tell me about yourself.",
+        "Introduce yourself as a fresher.",
+        "What are your strengths and career goals?",
+        "Why should we select you for this role?",
+        "Tell me about your education and skills."
+      ]
+    };
+  </script>
+  <script src="../js/rounds.js"></script>
+</body>
+</html>

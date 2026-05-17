@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>SkillCracker AI | Resume Round</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg" />
+
+  <link rel="stylesheet" href="../css/rounds.css" />
+</head>
+
+<body>
+  <div class="round-page">
+
+    <header class="round-topbar">
+      <a href="../dashboard.html" class="brand">
+        <div class="brand-icon">⚡</div>
+        <div>
+          <h2>SkillCracker <span>AI</span></h2>
+          <p>Voice Interview Mode</p>
+        </div>
+      </a>
+
+      <div class="round-status">
+        <span class="live-dot"></span>
+        <p>Round 02 / 05</p>
+      </div>
+    </header>
+
+    <main class="round-shell">
+
+      <section class="round-hero">
+        <span class="tag">RESUME-BASED ROUND</span>
+        <h1>Answer questions from your resume</h1>
+        <p>
+          AI will ask questions based on your skills, education, resume points,
+          internship, and experience.
+        </p>
+      </section>
+
+      <section class="interview-layout">
+
+        <div class="interview-card">
+          <div class="ai-avatar">
+            <div class="avatar-circle">AI</div>
+            <div class="wave">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <div class="question-box">
+            <p class="question-label">AI Question</p>
+            <h2 id="questionText">Click Start Round to begin your interview.</h2>
+          </div>
+
+          <div class="timer-box">
+            <p>Auto mic starts in</p>
+            <h3 id="countdown">--</h3>
+          </div>
+
+          <div class="answer-box">
+            <p>Your Answer</p>
+            <textarea id="answerText" placeholder="Your spoken answer will appear here..." readonly></textarea>
+          </div>
+
+          <div class="controls">
+            <button class="primary-btn" id="startBtn">Start Round</button>
+            <button class="ghost-btn" id="retryBtn">Retry Question</button>
+            <button class="finish-btn" id="finishBtn">Finish Round</button>
+          </div>
+        </div>
+
+        <aside class="side-panel">
+          <div class="score-card">
+            <h3>Live Round Score</h3>
+            <div class="score-circle">
+              <span id="liveScore">0%</span>
+            </div>
+          </div>
+
+          <div class="tips-card">
+            <h3>Resume Tips</h3>
+            <ul>
+              <li>Explain only what you know.</li>
+              <li>Give examples for every skill.</li>
+              <li>Do not fake experience.</li>
+              <li>Use project-based answers.</li>
+            </ul>
+          </div>
+        </aside>
+
+      </section>
+
+    </main>
+  </div>
+
+  <script src="../js/storage.js"></script>
+  <script type="module" src="../js/auth-check.js"></script>
+  <script>
+    window.roundConfig = {
+      roundKey: "round2",
+      nextPage: "project-website-round.html",
+      title: "Resume-Based Round",
+      questions: [
+        "Explain the skills mentioned in your resume.",
+        "Which project or skill in your resume is your strongest area?",
+        "Tell me about one achievement from your resume.",
+        "Why did you choose these skills?",
+        "How will your resume skills help this company?"
+      ]
+    };
+  </script>
+  <script src="../js/rounds.js"></script>
+</body>
+</html>

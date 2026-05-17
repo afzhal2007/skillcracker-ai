@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>SkillCracker AI | Round Scores</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg" />
+  <link rel="stylesheet" href="../css/results.css" />
+</head>
+
+<body>
+  <div class="result-page">
+
+    <header class="result-topbar">
+      <a href="../dashboard.html" class="brand">
+        <div class="brand-icon">⚡</div>
+        <div>
+          <h2>SkillCracker <span>AI</span></h2>
+          <p>Round Score Report</p>
+        </div>
+      </a>
+
+      <div class="top-actions">
+        <a href="../dashboard.html" class="nav-btn ghost">Dashboard</a>
+        <a href="final-score.html" class="nav-btn primary">Final Score</a>
+      </div>
+    </header>
+
+    <main class="result-shell">
+
+      <section class="hero-result">
+        <span class="tag">ROUND SCORES</span>
+        <h1>Round-wise performance</h1>
+        <p>Each round score helps you understand where you are strong and where you need to improve.</p>
+      </section>
+
+      <section class="table-card">
+        <div class="table-head">
+          <h2>Interview Round Scores</h2>
+          <p>Score updates only after completing a round.</p>
+        </div>
+
+        <div class="score-table" id="scoreTable"></div>
+      </section>
+
+      <div class="page-actions">
+        <a href="../dashboard.html" class="secondary-btn">Back Dashboard</a>
+        <a href="final-score.html" class="primary-btn">Final Score →</a>
+      </div>
+
+    </main>
+  </div>
+
+  <script type="module" src="../js/auth-check.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/results.js"></script>
+</body>
+</html>

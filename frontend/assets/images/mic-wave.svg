@@ -1,0 +1,25 @@
+<svg width="900" height="260" viewBox="0 0 900 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="260" rx="60" fill="#0F172A"/>
+  <g stroke-linecap="round">
+    <path d="M70 130V95" stroke="#22D3EE" stroke-width="14"/>
+    <path d="M110 130V70" stroke="#7C3AED" stroke-width="14"/>
+    <path d="M150 130V105" stroke="#22D3EE" stroke-width="14"/>
+    <path d="M190 130V45" stroke="#7C3AED" stroke-width="14"/>
+    <path d="M230 130V85" stroke="#22D3EE" stroke-width="14"/>
+    <path d="M270 130V115" stroke="#7C3AED" stroke-width="14"/>
+    <path d="M310 130V55" stroke="#22D3EE" stroke-width="14"/>
+    <path d="M350 130V90" stroke="#7C3AED" stroke-width="14"/>
+    <path d="M390 130V35" stroke="#22D3EE" stroke-width="14"/>
+    <path d="M430 130V100" stroke="#7C3AED" stroke-width="14"/>
+    <path d="M470 130V65" stroke="#22D3EE" stroke-width="14"/>
+    <path d="M510 130V110" stroke="#7C3AED" stroke-width="14"/>
+    <path d="M550 130V48" stroke="#22D3EE" stroke-width="14"/>
+    <path d="M590 130V82" stroke="#7C3AED" stroke-width="14"/>
+    <path d="M630 130V115" stroke="#22D3EE" stroke-width="14"/>
+    <path d="M670 130V56" stroke="#7C3AED" stroke-width="14"/>
+    <path d="M710 130V92" stroke="#22D3EE" stroke-width="14"/>
+    <path d="M750 130V40" stroke="#7C3AED" stroke-width="14"/>
+    <path d="M790 130V104" stroke="#22D3EE" stroke-width="14"/>
+    <path d="M830 130V76" stroke="#7C3AED" stroke-width="14"/>
+  </g>
+</svg>

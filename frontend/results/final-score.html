@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>SkillCracker AI | Final Score</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg" />
+  <link rel="stylesheet" href="../css/results.css" />
+</head>
+
+<body>
+  <div class="result-page">
+
+    <header class="result-topbar">
+      <a href="../dashboard.html" class="brand">
+        <div class="brand-icon">⚡</div>
+        <div>
+          <h2>SkillCracker <span>AI</span></h2>
+          <p>Interview Result Report</p>
+        </div>
+      </a>
+
+      <div class="top-actions">
+        <a href="../dashboard.html" class="nav-btn ghost">Dashboard</a>
+        <a href="mistake-analysis.html" class="nav-btn primary">Next</a>
+      </div>
+    </header>
+
+    <main class="result-shell">
+
+      <section class="hero-result">
+        <span class="tag">FINAL REPORT</span>
+        <h1>Great work, <span id="userName">User</span>! 🎉</h1>
+        <p>Your SkillCracker AI interview report is ready. Check your scores, mistakes, improvement tips, and motivation.</p>
+      </section>
+
+      <section class="score-overview">
+        <div class="main-score-card">
+          <h2>Final Average Score</h2>
+          <div class="big-score" id="finalScore">0%</div>
+          <p id="finalMessage">Complete interview rounds to see your final score.</p>
+        </div>
+
+        <div class="mini-score-card">
+          <h3>Rounds Completed</h3>
+          <h2 id="completedRounds">0/5</h2>
+          <p>Interview Progress</p>
+        </div>
+
+        <div class="mini-score-card">
+          <h3>Practice Time</h3>
+          <h2 id="practiceTime">00:00:00</h2>
+          <p>Total Time</p>
+        </div>
+      </section>
+
+      <section class="round-score-grid" id="roundScoreGrid"></section>
+
+      <div class="page-actions">
+        <a href="round-score.html" class="secondary-btn">Round Scores</a>
+        <a href="mistake-analysis.html" class="primary-btn">View Mistakes →</a>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="../js/storage.js"></script>
+  <script type="module" src="../js/auth-check.js"></script>
+  <script src="../js/results.js"></script>
+</body>
+</html>

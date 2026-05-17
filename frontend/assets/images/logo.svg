@@ -1,0 +1,20 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="80" y1="40" x2="420" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="0.48" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="16" result="b"/>
+      <feColorMatrix in="b" type="matrix" values="0 0 0 0 0.13 0 0 0 0 0.83 0 0 0 0 0.93 0 0 0 .7 0"/>
+      <feBlend in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="120" fill="#050816"/>
+  <rect x="55" y="55" width="402" height="402" rx="100" fill="url(#g)" opacity="0.92" filter="url(#glow)"/>
+  <path d="M168 270C185 340 256 371 326 331C365 308 384 265 373 222C357 160 294 126 232 151C190 168 162 207 161 253" stroke="white" stroke-width="34" stroke-linecap="round"/>
+  <path d="M238 184L221 262H282L253 344L345 230H288L313 184H238Z" fill="white"/>
+  <circle cx="178" cy="254" r="15" fill="#22D3EE"/>
+  <circle cx="341" cy="254" r="15" fill="#EC4899"/>
+</svg>

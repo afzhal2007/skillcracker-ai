@@ -1,0 +1,475 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>SkillCracker AI | Dashboard</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <!-- Brand -->
+      <div class="brand">
+        <div class="brand-icon">
+          <img src="assets/images/logo.svg" alt="SkillCracker AI Logo" />
+        </div>
+
+        <div class="brand-text">
+          <h2>SkillCracker <span>AI</span></h2>
+          <p>AI Interview Coach</p>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="side-menu">
+        <a href="dashboard.html" class="active">
+          <span class="menu-icon">🏠</span>
+          <span>Dashboard</span>
+        </a>
+
+        <a href="basic-details.html">
+          <span class="menu-icon">👤</span>
+          <span>My Profile</span>
+        </a>
+
+        <a href="instructions.html">
+          <span class="menu-icon">🎙️</span>
+          <span>Interview Rounds</span>
+        </a>
+
+        <a href="results/final-score.html">
+          <span class="menu-icon">📊</span>
+          <span>Scores & Results</span>
+        </a>
+
+        <a href="results/mistake-analysis.html">
+          <span class="menu-icon">✅</span>
+          <span>Mistake Analysis</span>
+        </a>
+
+        <a href="results/improvement-tips.html">
+          <span class="menu-icon">🚀</span>
+          <span>Improvement Tips</span>
+        </a>
+
+        <a href="results/motivation.html">
+          <span class="menu-icon">💜</span>
+          <span>Motivation</span>
+        </a>
+
+        <a href="results/feedback.html">
+          <span class="menu-icon">💬</span>
+          <span>Feedback</span>
+        </a>
+
+        <a href="#">
+          <span class="menu-icon">⚙️</span>
+          <span>Settings</span>
+        </a>
+
+        <a href="#" id="logoutBtn" style="display: none;">
+          <span class="menu-icon">🚪</span>
+          <span>Logout</span>
+        </a>
+      </nav>
+
+      <!-- Continue Box -->
+      <div class="continue-box">
+        <h3>Ready to continue?</h3>
+        <p>Your next round is waiting.</p>
+
+        <a href="instructions.html">
+          Continue Interview
+          <span class="rocket">➠</span>
+        </a>
+      </div>
+
+      <!-- Sidebar User -->
+      <div class="user-mini">
+        <div class="avatar">👤</div>
+        <div>
+          <h4 id="sideUserName">User</h4>
+          <p>Keep Improving ✨</p>
+        </div>
+      </div>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main -->
+    <main class="main">
+      <!-- Topbar -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <button
+            class="mobile-menu-btn"
+            id="mobileMenuBtn"
+            type="button"
+            aria-label="Open sidebar menu"
+          >
+            ☰
+          </button>
+
+          <div class="mobile-title">
+            <h2>Dashboard</h2>
+          </div>
+        </div>
+
+        <div class="top-actions">
+          <a href="login.html" class="top-btn login-btn" id="loginTopBtn">Login</a>
+          <a href="signup.html" class="top-btn signup-btn" id="signupTopBtn">Signup</a>
+
+          <button class="notify" type="button">
+            🔔
+            <span>0</span>
+          </button>
+
+          <div class="profile">
+            <div class="profile-icon">👤</div>
+            <div>
+              <h4 id="topUserName">User</h4>
+              <p id="topUserCourse">Select Department</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Welcome -->
+      <section class="welcome">
+        <div>
+          <h1>Welcome back, <span id="welcomeName">User</span>! 👋</h1>
+          <p>Track your progress and improve your interview skills</p>
+        </div>
+
+        <select>
+          <option>This Week</option>
+          <option>This Month</option>
+          <option>All Time</option>
+        </select>
+      </section>
+
+      <!-- Stats -->
+      <section class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-top">
+            <p>Overall Progress</p>
+            <span class="mini-icon blue-text">◔</span>
+          </div>
+
+          <h2 id="overallProgress">0%</h2>
+
+          <p class="small">
+            <span id="completedText">0 of 5</span> Rounds Completed
+          </p>
+
+          <div class="stat-line">
+            <span id="overallProgressLine"></span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-top">
+            <p>Average Score</p>
+            <span class="mini-icon purple-text">◆</span>
+          </div>
+
+          <h2 class="purple-text" id="averageScore">0%</h2>
+
+          <p class="small">Across All Completed Rounds</p>
+
+          <div class="stat-line purple-line">
+            <span id="averageScoreLine"></span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-top">
+            <p>Rounds Completed</p>
+            <span class="mini-icon green-text">✓</span>
+          </div>
+
+          <h2 id="roundsCompleted">0</h2>
+
+          <p class="small">Out of 5</p>
+
+          <div class="stat-line green-line">
+            <span id="roundsLine"></span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-top">
+            <p>Total Practice Time</p>
+            <span class="mini-icon orange-text">◷</span>
+          </div>
+
+          <h2 id="practiceTime">00:00:00</h2>
+
+          <p class="small">Hours : Minutes : Seconds</p>
+
+          <div class="stat-line orange-line">
+            <span id="timeLine"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dashboard Grid -->
+      <section class="dashboard-grid">
+        <!-- Interview Rounds -->
+        <div class="panel rounds-panel">
+          <h2>Interview Rounds</h2>
+
+          <div class="round-item">
+            <div class="round-left">
+              <div class="round-icon blue-bg">👤</div>
+              <div class="round-no">01</div>
+              <div class="round-info">
+                <h3>Self Introduction Round</h3>
+                <p>Introduce yourself confidently</p>
+              </div>
+            </div>
+
+            <div class="round-right">
+              <span class="status pending" id="round1Status">Pending</span>
+              <strong id="round1Score">-</strong>
+              <a href="rounds/self-intro.html" class="arrow">›</a>
+            </div>
+          </div>
+
+          <div class="round-item">
+            <div class="round-left">
+              <div class="round-icon green-bg">📄</div>
+              <div class="round-no">02</div>
+              <div class="round-info">
+                <h3>Resume-Based Round</h3>
+                <p>Questions from your resume</p>
+              </div>
+            </div>
+
+            <div class="round-right">
+              <span class="status pending" id="round2Status">Pending</span>
+              <strong id="round2Score">-</strong>
+              <a href="rounds/resume-round.html" class="arrow">›</a>
+            </div>
+          </div>
+
+          <div class="round-item">
+            <div class="round-left">
+              <div class="round-icon purple-bg">🌐</div>
+              <div class="round-no">03</div>
+              <div class="round-info">
+                <h3>Project / Website Round</h3>
+                <p>Questions about your project</p>
+              </div>
+            </div>
+
+            <div class="round-right">
+              <span class="status pending" id="round3Status">Pending</span>
+              <strong id="round3Score">-</strong>
+              <a href="rounds/project-website-round.html" class="arrow">›</a>
+            </div>
+          </div>
+
+          <div class="round-item">
+            <div class="round-left">
+              <div class="round-icon orange-bg">⌨️</div>
+              <div class="round-no">04</div>
+              <div class="round-info">
+                <h3>AI Code / Task Round</h3>
+                <p>Code explanation and logic</p>
+              </div>
+            </div>
+
+            <div class="round-right">
+              <span class="status pending" id="round4Status">Pending</span>
+              <strong id="round4Score">-</strong>
+              <a href="rounds/code-task-round.html" class="arrow">›</a>
+            </div>
+          </div>
+
+          <div class="round-item">
+            <div class="round-left">
+              <div class="round-icon sky-bg">🎓</div>
+              <div class="round-no">05</div>
+              <div class="round-info">
+                <h3>Course-Based Interview</h3>
+                <p>Subject and domain questions</p>
+              </div>
+            </div>
+
+            <div class="round-right">
+              <span class="status pending" id="round5Status">Pending</span>
+              <strong id="round5Score">-</strong>
+              <a href="rounds/course-interview-round.html" class="arrow">›</a>
+            </div>
+          </div>
+
+          <a class="view-btn" href="instructions.html">View All Rounds</a>
+        </div>
+
+        <!-- Performance Overview -->
+        <div class="panel performance-panel">
+          <h2>Performance Overview</h2>
+
+          <div class="donut" id="scoreDonut">
+            <div>
+              <strong id="donutScore">0%</strong>
+              <span>Average Score</span>
+            </div>
+          </div>
+
+          <div class="legend">
+            <div>
+              <span class="dot blue-dot"></span>
+              Self Introduction
+              <b id="legend1">-</b>
+            </div>
+
+            <div>
+              <span class="dot green-dot"></span>
+              Resume Round
+              <b id="legend2">-</b>
+            </div>
+
+            <div>
+              <span class="dot purple-dot"></span>
+              Project Round
+              <b id="legend3">-</b>
+            </div>
+
+            <div>
+              <span class="dot orange-dot"></span>
+              Code Round
+              <b id="legend4">-</b>
+            </div>
+
+            <div>
+              <span class="dot sky-dot"></span>
+              Course Round
+              <b id="legend5">-</b>
+            </div>
+          </div>
+
+          <a class="view-btn" href="results/final-score.html">Detailed Analysis</a>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="panel activity-panel">
+          <div class="panel-head">
+            <h2>Recent Activity</h2>
+            <button type="button">View All</button>
+          </div>
+
+          <div id="activityList" class="activity-list">
+            <div class="empty-state">
+              <h3>No activity yet</h3>
+              <p>Complete any round to see your activity here.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Strengths -->
+        <div class="panel focus-panel">
+          <h2>Your Strengths & Focus Areas</h2>
+
+          <div class="focus-box">
+            <h3>🏆 Strengths</h3>
+            <div id="strengthList" class="tags">
+              <span>No strengths yet</span>
+            </div>
+          </div>
+
+          <div class="focus-box">
+            <h3>🎯 Focus Areas</h3>
+            <div id="focusList" class="tags danger">
+              <span>Complete rounds to get focus areas</span>
+            </div>
+          </div>
+
+          <div class="suggestion">
+            <h3>✨ AI Suggestion</h3>
+            <p id="aiSuggestion">
+              Start your first interview round to get personalized AI suggestions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Motivation -->
+      <section class="motivation-card">
+        <div class="motivation-icon">⭐</div>
+
+        <div>
+          <h2 id="motivationTitle">Start Your Interview Journey!</h2>
+          <p id="motivationText">
+            Complete your first round to unlock progress, scores, mistake analysis, and improvement tips.
+          </p>
+        </div>
+
+        <a href="instructions.html">Continue Interview →</a>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p>© 2026 SkillCracker AI. All rights reserved.</p>
+
+        <div>
+          <a href="#">Privacy Policy</a>
+          <span>•</span>
+          <a href="#">Terms of Use</a>
+          <span>•</span>
+          <a href="#">Contact Us</a>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Department Selection Modal -->
+    <div class="department-modal" id="departmentModal">
+      <div class="department-box">
+        <div class="department-icon">🎓</div>
+
+        <h2>Select Your Department</h2>
+        <p>
+          Choose your department. This will be shown under your name and used for interview questions.
+        </p>
+
+        <select id="departmentSelect">
+          <option value="">Choose Department</option>
+          <option>AI & Data Science</option>
+          <option>Computer Science Engineering</option>
+          <option>Information Technology</option>
+          <option>Electronics and Communication</option>
+          <option>Electrical and Electronics Engineering</option>
+          <option>Mechanical Engineering</option>
+          <option>Civil Engineering</option>
+          <option>Cyber Security</option>
+          <option>Data Science</option>
+          <option>BCA</option>
+          <option>BSc Computer Science</option>
+          <option>B.Com</option>
+          <option>BBA</option>
+          <option>MBA</option>
+          <option>Nursing</option>
+          <option>Pharmacy</option>
+          <option>Arts and Science</option>
+          <option>General Fresher</option>
+        </select>
+
+        <button id="saveDepartmentBtn" type="button">
+          Save Department →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/auth-check.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script type="module" src="js/logout.js"></script>
+</body>
+</html>

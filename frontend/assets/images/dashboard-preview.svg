@@ -1,0 +1,21 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="42" fill="#071021"/>
+  <rect x="26" y="26" width="1148" height="708" rx="34" fill="#0F172A" stroke="#334155"/>
+  <rect x="50" y="50" width="230" height="660" rx="28" fill="#020617"/>
+  <rect x="310" y="70" width="820" height="130" rx="28" fill="#111827" stroke="#334155"/>
+  <rect x="330" y="230" width="180" height="120" rx="24" fill="#111827" stroke="#334155"/>
+  <rect x="535" y="230" width="180" height="120" rx="24" fill="#111827" stroke="#334155"/>
+  <rect x="740" y="230" width="180" height="120" rx="24" fill="#111827" stroke="#334155"/>
+  <rect x="945" y="230" width="180" height="120" rx="24" fill="#111827" stroke="#334155"/>
+  <rect x="310" y="380" width="520" height="300" rx="28" fill="#111827" stroke="#334155"/>
+  <rect x="860" y="380" width="270" height="300" rx="28" fill="#111827" stroke="#334155"/>
+  <circle cx="995" cy="520" r="82" fill="none" stroke="#22D3EE" stroke-width="26"/>
+  <path d="M995 438A82 82 0 0 1 1065 563" stroke="#7C3AED" stroke-width="26" stroke-linecap="round"/>
+  <text x="130" y="105" fill="#fff" font-family="Arial" font-weight="700" font-size="26">SkillCracker</text>
+  <text x="335" y="120" fill="#fff" font-family="Arial" font-weight="700" font-size="34">Interview Progress</text>
+  <text x="335" y="165" fill="#94A3B8" font-family="Arial" font-size="20">Voice-based AI mock interview dashboard</text>
+  <text x="368" y="305" fill="#22D3EE" font-family="Arial" font-weight="700" font-size="36">72%</text>
+  <text x="570" y="305" fill="#A78BFA" font-family="Arial" font-weight="700" font-size="36">78%</text>
+  <text x="775" y="305" fill="#22C55E" font-family="Arial" font-weight="700" font-size="36">75%</text>
+  <text x="980" y="305" fill="#F59E0B" font-family="Arial" font-weight="700" font-size="36">70%</text>
+</svg>

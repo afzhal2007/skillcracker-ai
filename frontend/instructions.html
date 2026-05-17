@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>SkillCracker AI | Instructions</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg" />
+
+  <link rel="stylesheet" href="css/form.css" />
+</head>
+
+<body>
+  <div class="page-bg">
+
+    <header class="top-nav">
+      <a href="dashboard.html" class="brand">
+        <div class="brand-icon">⚡</div>
+        <div>
+          <h2>SkillCracker <span>AI</span></h2>
+          <p>AI Interview Coach</p>
+        </div>
+      </a>
+
+      <div class="nav-actions">
+        <a href="basic-details.html" class="nav-btn ghost">Back</a>
+        <a href="rounds/self-intro.html" class="nav-btn primary">Start Interview</a>
+      </div>
+    </header>
+
+    <main class="form-shell">
+
+      <section class="hero-card instruction-hero">
+        <div>
+          <span class="tag">STEP 02</span>
+          <h1>Read the instructions before <span>starting</span></h1>
+          <p>
+            SkillCracker AI will ask interview questions through voice.
+            Answer clearly using your microphone and complete each round without leaving.
+          </p>
+        </div>
+
+        <div class="progress-widget">
+          <div class="circle">2/4</div>
+          <p>Interview Rules</p>
+        </div>
+      </section>
+
+      <section class="instruction-layout">
+
+        <div class="instruction-main">
+
+          <div class="form-card">
+            <div class="card-head">
+              <div class="card-icon blue">🎙️</div>
+              <div>
+                <h2>Voice Interview Rules</h2>
+                <p>Follow these rules for better scoring.</p>
+              </div>
+            </div>
+
+            <div class="rules-list">
+              <div class="rule-item">
+                <span>01</span>
+                <div>
+                  <h3>Speak only in English</h3>
+                  <p>AI will evaluate your pronunciation, clarity, confidence, and grammar.</p>
+                </div>
+              </div>
+
+              <div class="rule-item">
+                <span>02</span>
+                <div>
+                  <h3>Mic will turn on automatically</h3>
+                  <p>After AI asks a question, wait 2 seconds. Then answer through your mic.</p>
+                </div>
+              </div>
+
+              <div class="rule-item">
+                <span>03</span>
+                <div>
+                  <h3>Do not refresh or go back</h3>
+                  <p>Once interview starts, complete the round before leaving the page.</p>
+                </div>
+              </div>
+
+              <div class="rule-item">
+                <span>04</span>
+                <div>
+                  <h3>Answer naturally</h3>
+                  <p>Use simple English. Give examples from your resume, skills, or project.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-card">
+            <div class="card-head">
+              <div class="card-icon purple">🏆</div>
+              <div>
+                <h2>Interview Rounds</h2>
+                <p>You will complete 5 rounds step by step.</p>
+              </div>
+            </div>
+
+            <div class="round-timeline">
+              <div class="timeline-item">
+                <div class="timeline-icon">👤</div>
+                <div>
+                  <h3>Round 1: Self Introduction</h3>
+                  <p>Introduce yourself confidently.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-icon">📄</div>
+                <div>
+                  <h3>Round 2: Resume-Based Round</h3>
+                  <p>AI asks questions from your resume and skills.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-icon">🌐</div>
+                <div>
+                  <h3>Round 3: Project / Website Round</h3>
+                  <p>AI asks questions from your project or website link.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-icon">⌨️</div>
+                <div>
+                  <h3>Round 4: AI Code / Task Round</h3>
+                  <p>AI gives code. You explain logic and answer questions.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-icon">🎓</div>
+                <div>
+                  <h3>Round 5: Course-Based Interview</h3>
+                  <p>Questions from your selected course and domain.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <aside class="instruction-side">
+
+          <div class="side-card glow">
+            <h2>Before You Start</h2>
+
+            <div class="check-list">
+              <label>
+                <input type="checkbox" class="agree-check" />
+                <span>My microphone is working</span>
+              </label>
+
+              <label>
+                <input type="checkbox" class="agree-check" />
+                <span>I am in a quiet place</span>
+              </label>
+
+              <label>
+                <input type="checkbox" class="agree-check" />
+                <span>I will answer only in English</span>
+              </label>
+
+              <label>
+                <input type="checkbox" class="agree-check" />
+                <span>I will complete all rounds</span>
+              </label>
+            </div>
+
+            <button class="submit-btn full" id="startBtn" disabled>
+              Start Interview →
+            </button>
+
+            <p class="side-note">
+              Complete all checkboxes to unlock the interview.
+            </p>
+          </div>
+
+          <div class="side-card">
+            <h2>AI Scoring Based On</h2>
+
+            <div class="score-row">
+              <span>Confidence</span>
+              <b>25%</b>
+            </div>
+
+            <div class="score-row">
+              <span>English Clarity</span>
+              <b>25%</b>
+            </div>
+
+            <div class="score-row">
+              <span>Answer Quality</span>
+              <b>30%</b>
+            </div>
+
+            <div class="score-row">
+              <span>Technical Knowledge</span>
+              <b>20%</b>
+            </div>
+          </div>
+
+        </aside>
+
+      </section>
+
+    </main>
+  </div>
+
+  <div class="toast" id="toast">All set! Starting interview 🚀</div>
+
+  <script src="js/storage.js"></script>
+  <script type="module" src="js/auth-check.js"></script>
+  <script src="js/instructions.js"></script>
+</body>
+</html>
