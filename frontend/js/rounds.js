@@ -365,7 +365,7 @@ async function evaluateAnswerBackend(answer) {
     return { ok: false, message: "User session not found. Please logout and login again.", sessionMissing: true };
   }
 
-  const url = "http://localhost:5000/api/evaluate-answer";
+  const url = "https://skillcracker-ai.vercel.app/api/evaluate-answer";
 
   try {
     const response = await fetch(url, {
